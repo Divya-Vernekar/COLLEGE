@@ -1,0 +1,31 @@
+<html>
+<head>
+<body>
+<script type="text/javascript">
+
+var myDate=new Date();
+var myDay=myDate.getDay();
+var weekday=['Sunday','Monday','Tueday','Wednesday','Thursday','Friday','Saturday'];
+
+document.write("Today is : "+weekday[myDay]);
+document.write("<br/>");
+
+var hours=myDate.getHours();
+var ampm=hours>=12 ? 'AM' : 'PM';
+hours=hours % 12;
+hours=hours ? hours : 12;
+
+var minutes=myDate.getMinutes();
+minutes=minutes<10 ? '0' + minutes : minutes;
+
+var myTime=hours+" "
+	+ampm+":"
+	+minutes+":"
+	+myDate.getMilliseconds();
+document.write("\tCurrent Time is  :  "  +myTime);
+
+</script>
+</body>
+</head>
+</html>
+

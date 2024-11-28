@@ -1,0 +1,46 @@
+<html>
+<head>
+<script>
+var numOne,numTwo,res,temp;
+function fun()
+{
+	numOne=parseInt(document.getElementById("One").value);
+	numTwo=parseInt(document.getElementById("Two").value);
+	if(numOne && numTwo)
+	{
+		temp=document.getElementById("res");
+		temp.style.display="block";
+		
+		res=numOne+numTwo;
+		document.getElementById("add").value=res;
+
+		res=numOne-numTwo;
+		document.getElementById("substract").value=res;
+
+		res=numOne*numTwo;
+		document.getElementById("multiply").value=res;
+
+		res=numOne/numTwo;
+		document.getElementById("divide").value=res;
+	}
+}
+</script>
+</head>
+<body>
+<p id="input">
+	Enter first number:<input id="One">
+	<br/><br/>
+	Enter second number:<input id="Two">
+</p>
+<p>
+<button onclick="fun()">Add,Substract,Multiply,Division</button>
+</p>
+<p id="res" style="display:none";>
+Addition result=<input id="add"><br/><br/>
+Substaction result=<input id="substract"><br/><br/>
+Multiplication result=<input id="multiply"><br/><br/>
+Division result=<input id="divide"><br/><br/>
+</body>
+</html>
+
+	
